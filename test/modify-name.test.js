@@ -37,3 +37,11 @@ describe("Check function getStrDropCharactersInBrackets", function () {
     ).toBe("Foo  a  b");
   });
 });
+
+describe("Check function getStrDropUndesiredCharacters", function () {
+  it("Check expected result", function () {
+    expect(exportedForTesting.getStrDropUndesiredCharacters("Foo .foo.")).toBe(
+      "Foo  foo ",
+    );
+  });
+});

@@ -10,6 +10,7 @@ function getStrLowercase(string) {
   return string.toLowerCase();
 }
 
+// https://stackoverflow.com/questions/34913675/how-to-iterate-keys-values-in-javascript
 function getStrReplaceNonAscii(string) {
   const replacements = {
     á: "a",
@@ -30,10 +31,16 @@ function getStrDropCharactersInBrackets(string) {
   return string.replace(/\[.*?\]/g, "");
 }
 
+// https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
+function getStrDropUndesiredCharacters(string) {
+  return string.replace(/\./g, " ");
+}
+
 export const exportedForTesting = {
   getStrDropLeadAndTrailWhitespaces,
   getStrConsecutiveWhitespacesToOnlyOne,
   getStrLowercase,
   getStrReplaceNonAscii,
   getStrDropCharactersInBrackets,
+  getStrDropUndesiredCharacters,
 };
