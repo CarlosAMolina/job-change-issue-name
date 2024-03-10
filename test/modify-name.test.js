@@ -25,3 +25,11 @@ describe("Check function get_str_lowercase", function () {
     expect(exportedForTesting.get_str_lowercase("ÁáÑ")).toBe("ááñ");
   });
 });
+
+describe("Check function get_str_remove_non_ascii", function () {
+  it("Check expected result", function () {
+    expect(exportedForTesting.get_str_remove_non_ascii("áéíóúñ")).toBe(
+      "aeioun",
+    );
+  });
+});
