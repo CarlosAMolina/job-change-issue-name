@@ -1,0 +1,35 @@
+{
+  "name": "job-modify-issue-name",
+  "version": "1.0.0",
+  "description": "Modify the name of a Jira's issuer to create git branches, folders, etc.",
+  "main": "src/modify-name.js",
+  "scripts": {
+    "lint": "npx eslint src test",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src test --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "test": "jest"
+  },
+  "pre-commit": [
+      "lint",
+      "prettier",
+      "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosAMolina/job-modify-issue-name.git"
+  },
+  "author": "Carlos A Molina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CarlosAMolina/job-modify-issue-name/issues"
+  },
+  "homepage": "https://github.com/CarlosAMolina/job-modify-issue-name#readme",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.23.3",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "3.2.5"
+  }
+}
