@@ -29,3 +29,11 @@ describe("Check function getStrReplaceNonAscii", function () {
     expect(exportedForTesting.getStrReplaceNonAscii("áéíóúñ")).toBe("aeioun");
   });
 });
+
+describe("Check function getStrDropCharactersInBrackets", function () {
+  it("Check expected result", function () {
+    expect(
+      exportedForTesting.getStrDropCharactersInBrackets("Foo [foo] a [bar] b"),
+    ).toBe("Foo  a  b");
+  });
+});

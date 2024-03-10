@@ -26,9 +26,14 @@ function getStrReplaceNonAscii(string) {
   return result;
 }
 
+function getStrDropCharactersInBrackets(string) {
+  return string.replace(/\[.*?\]/g, "");
+}
+
 export const exportedForTesting = {
   getStrDropLeadAndTrailWhitespaces,
   getStrConsecutiveWhitespacesToOnlyOne,
   getStrLowercase,
   getStrReplaceNonAscii,
+  getStrDropCharactersInBrackets,
 };
