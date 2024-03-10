@@ -20,7 +20,8 @@ function getStrRemoveNonAscii(string) {
     ú: "u",
     ñ: "n",
   };
-  return string.replace(/[áéíóúñ]/g, (matched) => replacements[matched]);
+  const regex = /[áéíóúñ]/g;
+  return string.replace(regex, (matched) => replacements[matched]);
 }
 
 export const exportedForTesting = {
