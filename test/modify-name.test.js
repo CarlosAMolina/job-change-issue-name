@@ -22,6 +22,6 @@ describe("Check function get_str_consecutive_whitespaces_to_only_one", function 
 
 describe("Check function get_str_lowercase", function () {
   it("Check expected result", function () {
-    expect(exportedForTesting.get_str_lowercase("ÁáÑ")).toBe("áañ");
+    expect(exportedForTesting.get_str_lowercase("ÁáÑ")).toBe("ááñ");
   });
 });
