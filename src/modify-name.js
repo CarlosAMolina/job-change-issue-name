@@ -1,4 +1,4 @@
-export function getStrModified(string) {
+function getStrModified(string) {
   let result = string;
   result = getStrDropCharactersInBrackets(result);
   result = getStrLowercase(result);
@@ -53,6 +53,7 @@ function getStrReplaceWhitespaces(string) {
 }
 
 export const exportedForTesting = {
+  getStrModified,
   getStrDropLeadAndTrailWhitespaces,
   getStrConsecutiveWhitespacesToOnlyOne,
   getStrLowercase,

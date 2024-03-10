@@ -1,14 +1,12 @@
 import { describe, expect, it } from "@jest/globals";
 
-import { getStrModified } from "../src/modify-name.js";
-
 import { exportedForTesting } from "../src/modify-name.js";
 
 describe("Check function getStrModified", function () {
   it("Check expected result", function () {
-    expect(getStrModified("ASDF [foo] [bar] step 1.foo.")).toBe(
-      "asdf-step-1-foo",
-    );
+    expect(
+      exportedForTesting.getStrModified("ASDF [foo] [bar] step 1.foo."),
+    ).toBe("asdf-step-1-foo");
   });
 });
 
