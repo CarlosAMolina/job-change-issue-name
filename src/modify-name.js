@@ -10,7 +10,6 @@ function getStrLowercase(string) {
   return string.toLowerCase();
 }
 
-// https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
 function getStrRemoveNonAscii(string) {
   const replacements = {
     á: "a",
@@ -20,8 +19,11 @@ function getStrRemoveNonAscii(string) {
     ú: "u",
     ñ: "n",
   };
-  const regex = /[áéíóúñ]/g;
-  return string.replace(regex, (matched) => replacements[matched]);
+  let result = string;
+  for (const [oldCharacter, newCharacter] of Object.entries(replacements)) {
+    result = result.replace(oldCharacter, newCharacter);
+  }
+  return result;
 }
 
 export const exportedForTesting = {
