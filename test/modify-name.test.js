@@ -24,8 +24,8 @@ describe("Check function getStrLowercase", function () {
   });
 });
 
-describe("Check function getStrRemoveNonAscii", function () {
+describe("Check function getStrReplaceNonAscii", function () {
   it("Check expected result", function () {
-    expect(exportedForTesting.getStrRemoveNonAscii("áéíóúñ")).toBe("aeioun");
+    expect(exportedForTesting.getStrReplaceNonAscii("áéíóúñ")).toBe("aeioun");
   });
 });

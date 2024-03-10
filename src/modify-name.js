@@ -10,7 +10,7 @@ function getStrLowercase(string) {
   return string.toLowerCase();
 }
 
-function getStrRemoveNonAscii(string) {
+function getStrReplaceNonAscii(string) {
   const replacements = {
     á: "a",
     é: "e",
@@ -30,5 +30,5 @@ export const exportedForTesting = {
   getStrDropLeadAndTrailWhitespaces,
   getStrConsecutiveWhitespacesToOnlyOne,
   getStrLowercase,
-  getStrRemoveNonAscii,
+  getStrReplaceNonAscii,
 };
