@@ -1,6 +1,16 @@
 import { describe, expect, it } from "@jest/globals";
 
+import { getStrModified } from "../src/modify-name.js";
+
 import { exportedForTesting } from "../src/modify-name.js";
+
+describe("Check function getStrModified", function () {
+  it("Check expected result", function () {
+    expect(getStrModified("ASDF [foo] [bar] step 1.foo.")).toBe(
+      "asdf-step-1-foo",
+    );
+  });
+});
 
 describe("Check function getStrDropLeadAndTrailWhitespaces", function () {
   it("Check expected result", function () {
@@ -42,6 +52,14 @@ describe("Check function getStrDropUndesiredCharacters", function () {
   it("Check expected result", function () {
     expect(exportedForTesting.getStrDropUndesiredCharacters("Foo .foo.")).toBe(
       "Foo  foo ",
+    );
+  });
+});
+
+describe("Check function getStrReplaceWhitespaces", function () {
+  it("Check expected result", function () {
+    expect(exportedForTesting.getStrReplaceWhitespaces("foo bar foo")).toBe(
+      "foo-bar-foo",
     );
   });
 });

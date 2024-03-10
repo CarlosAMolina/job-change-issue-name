@@ -1,3 +1,15 @@
+export function getStrModified(string) {
+  let result = string;
+  result = getStrDropCharactersInBrackets(result);
+  result = getStrLowercase(result);
+  result = getStrReplaceNonAscii(result);
+  result = getStrDropUndesiredCharacters(result);
+  result = getStrConsecutiveWhitespacesToOnlyOne(result);
+  result = getStrDropLeadAndTrailWhitespaces(result);
+  result = getStrReplaceWhitespaces(result);
+  return result;
+}
+
 function getStrDropLeadAndTrailWhitespaces(string) {
   return string.trim();
 }
@@ -36,6 +48,10 @@ function getStrDropUndesiredCharacters(string) {
   return string.replace(/\./g, " ");
 }
 
+function getStrReplaceWhitespaces(string) {
+  return string.replace(/\s/g, "-");
+}
+
 export const exportedForTesting = {
   getStrDropLeadAndTrailWhitespaces,
   getStrConsecutiveWhitespacesToOnlyOne,
@@ -43,4 +59,5 @@ export const exportedForTesting = {
   getStrReplaceNonAscii,
   getStrDropCharactersInBrackets,
   getStrDropUndesiredCharacters,
+  getStrReplaceWhitespaces,
 };
