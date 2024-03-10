@@ -2,34 +2,30 @@ import { describe, expect, it } from "@jest/globals";
 
 import { exportedForTesting } from "../src/modify-name.js";
 
-describe("Check function get_str_drop_lead_and_trail_whitespaces", function () {
+describe("Check function getStrDropLeadAndTrailWhitespaces", function () {
   it("Check expected result", function () {
     expect(
-      exportedForTesting.get_str_drop_lead_and_trail_whitespaces(" ab c   "),
+      exportedForTesting.getStrDropLeadAndTrailWhitespaces(" ab c   "),
     ).toBe("ab c");
   });
 });
 
-describe("Check function get_str_consecutive_whitespaces_to_only_one", function () {
+describe("Check function getStrConsecutiveWhitespacesToOnlyOne", function () {
   it("Check expected result", function () {
     expect(
-      exportedForTesting.get_str_consecutive_whitespaces_to_only_one(
-        " a  b    c",
-      ),
+      exportedForTesting.getStrConsecutiveWhitespacesToOnlyOne(" a  b    c"),
     ).toBe(" a b c");
   });
 });
 
-describe("Check function get_str_lowercase", function () {
+describe("Check function getStrLowercase", function () {
   it("Check expected result", function () {
-    expect(exportedForTesting.get_str_lowercase("ÁáÑ")).toBe("ááñ");
+    expect(exportedForTesting.getStrLowercase("ÁáÑ")).toBe("ááñ");
   });
 });
 
-describe("Check function get_str_remove_non_ascii", function () {
+describe("Check function getStrRemoveNonAscii", function () {
   it("Check expected result", function () {
-    expect(exportedForTesting.get_str_remove_non_ascii("áéíóúñ")).toBe(
-      "aeioun",
-    );
+    expect(exportedForTesting.getStrRemoveNonAscii("áéíóúñ")).toBe("aeioun");
   });
 });
