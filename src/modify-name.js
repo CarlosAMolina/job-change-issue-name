@@ -36,7 +36,7 @@ function getErrorMessageToShow(error) {
 function getStrModified(string) {
   let result = string;
   result = getStrDropCharactersInBrackets(result);
-  result = getStrLowercase(result);
+  result = getStrIssuerRequiredPartsAsLowercase(result);
   result = getStrReplaceNonAscii(result);
   result = getStrDropUndesiredCharacters(result);
   result = getStrConsecutiveWhitespacesToOnlyOne(result);
@@ -51,6 +51,12 @@ function getStrDropLeadAndTrailWhitespaces(string) {
 
 function getStrConsecutiveWhitespacesToOnlyOne(string) {
   return string.replace(/\s+/g, " ");
+}
+
+function getStrIssuerRequiredPartsAsLowercase(string) {
+  const issuerId = getStrIssuerId(string);
+  const noIssuerId = getStrWithoutIssuerId(string);
+  return issuerId.concat(" ", getStrLowercase(noIssuerId));
 }
 
 function getStrIssuerId(string) {
@@ -111,6 +117,7 @@ export const exportedForTesting = {
   getStrLowercase,
   getStrReplaceNonAscii,
   getStrDropCharactersInBrackets,
+  getStrIssuerRequiredPartsAsLowercase,
   getStrDropUndesiredCharacters,
   getStrReplaceWhitespaces,
 };

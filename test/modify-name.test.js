@@ -6,7 +6,7 @@ describe("Check function getStrModified", function () {
   it("Check expected result", function () {
     expect(
       exportedForTesting.getStrModified("ASDF: [foo] [bar] step 1:.foo."),
-    ).toBe("asdf-step-1-foo");
+    ).toBe("ASDF-step-1-foo");
   });
 });
 
@@ -23,6 +23,13 @@ describe("Check function getStrConsecutiveWhitespacesToOnlyOne", function () {
     expect(
       exportedForTesting.getStrConsecutiveWhitespacesToOnlyOne(" a  b    c"),
     ).toBe(" a b c");
+  });
+});
+
+
+describe("Check function getStrIssuerRequiredPartsAsLowercase", function () {
+  it("Check expected result", function () {
+    expect(exportedForTesting.getStrIssuerRequiredPartsAsLowercase("AB CD EF")).toBe("AB cd ef");
   });
 });
 
