@@ -39,17 +39,17 @@ function getStrModified(string) {
   result = getStrIssuerRequiredPartsAsLowercase(result);
   result = getStrReplaceNonAscii(result);
   result = getStrDropUndesiredCharacters(result);
-  result = getStrConsecutiveWhitespacesToOnlyOne(result);
-  result = getStrDropLeadAndTrailWhitespaces(result);
-  result = getStrReplaceWhitespaces(result);
+  result = getStrConsecutiveWhiteSpacesToOnlyOne(result);
+  result = getStrDropLeadAndTrailWhiteSpaces(result);
+  result = getStrReplaceWhiteSpaces(result);
   return result;
 }
 
-function getStrDropLeadAndTrailWhitespaces(string) {
+function getStrDropLeadAndTrailWhiteSpaces(string) {
   return string.trim();
 }
 
-function getStrConsecutiveWhitespacesToOnlyOne(string) {
+function getStrConsecutiveWhiteSpacesToOnlyOne(string) {
   return string.replace(/\s+/g, " ");
 }
 
@@ -60,16 +60,16 @@ function getStrIssuerRequiredPartsAsLowercase(string) {
 }
 
 function getStrIssuerId(string) {
-  return string.substring(0, getIntIndexOfFirstWhitespace(string));
+  return string.substring(0, getIntIndexOfFirstWhiteSpace(string));
 }
 
 function getStrWithoutIssuerId(string) {
   return string.substring(
-    getIntIndexOfFirstWhitespace(string) + 1, string.length
+    getIntIndexOfFirstWhiteSpace(string) + 1, string.length
   );
 }
 
-function getIntIndexOfFirstWhitespace(string) {
+function getIntIndexOfFirstWhiteSpace(string) {
   return string.indexOf(' ');
 }
 
@@ -103,15 +103,15 @@ function getStrDropUndesiredCharacters(string) {
   return string.replace(/\.|:/g, " ");
 }
 
-function getStrReplaceWhitespaces(string) {
+function getStrReplaceWhiteSpaces(string) {
   return string.replace(/\s/g, "-");
 }
 
 // Uncomment for testing.
 // export const exportedForTesting = {
 //   getStrModified,
-//   getStrDropLeadAndTrailWhitespaces,
-//   getStrConsecutiveWhitespacesToOnlyOne,
+//   getStrDropLeadAndTrailWhiteSpaces,
+//   getStrConsecutiveWhiteSpacesToOnlyOne,
 //   getStrIssuerId,
 //   getStrWithoutIssuerId,
 //   getStrLowercase,
@@ -119,5 +119,5 @@ function getStrReplaceWhitespaces(string) {
 //   getStrDropCharactersInBrackets,
 //   getStrIssuerRequiredPartsAsLowercase,
 //   getStrDropUndesiredCharacters,
-//   getStrReplaceWhitespaces,
+//   getStrReplaceWhiteSpaces,
 // };

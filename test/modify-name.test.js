@@ -10,18 +10,18 @@ describe("Check function getStrModified", function () {
   });
 });
 
-describe("Check function getStrDropLeadAndTrailWhitespaces", function () {
+describe("Check function getStrDropLeadAndTrailWhiteSpaces", function () {
   it("Check expected result", function () {
     expect(
-      exportedForTesting.getStrDropLeadAndTrailWhitespaces(" ab c   "),
+      exportedForTesting.getStrDropLeadAndTrailWhiteSpaces(" ab c   "),
     ).toBe("ab c");
   });
 });
 
-describe("Check function getStrConsecutiveWhitespacesToOnlyOne", function () {
+describe("Check function getStrConsecutiveWhiteSpacesToOnlyOne", function () {
   it("Check expected result", function () {
     expect(
-      exportedForTesting.getStrConsecutiveWhitespacesToOnlyOne(" a  b    c"),
+      exportedForTesting.getStrConsecutiveWhiteSpacesToOnlyOne(" a  b    c"),
     ).toBe(" a b c");
   });
 });
@@ -73,9 +73,9 @@ describe("Check function getStrDropUndesiredCharacters", function () {
   });
 });
 
-describe("Check function getStrReplaceWhitespaces", function () {
+describe("Check function getStrReplaceWhiteSpaces", function () {
   it("Check expected result", function () {
-    expect(exportedForTesting.getStrReplaceWhitespaces("foo bar foo")).toBe(
+    expect(exportedForTesting.getStrReplaceWhiteSpaces("foo bar foo")).toBe(
       "foo-bar-foo",
     );
   });
