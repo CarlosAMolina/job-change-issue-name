@@ -1,13 +1,13 @@
-//document.getElementById("search-button").onclick = function () {
-//  run_input_query();
-//};
-//
-//document.getElementById("search-input").onkeydown = function (e) {
-//  if (e.key === "Enter") {
-//    run_input_query();
-//  }
-//};
-//
+document.getElementById("search-button").onclick = function () {
+  run_input_query();
+};
+
+document.getElementById("search-input").onkeydown = function (e) {
+  if (e.key === "Enter") {
+    run_input_query();
+  }
+};
+
 function run_input_query() {
   const searchTerm = document.getElementById("search-input").value;
   try {
@@ -108,16 +108,16 @@ function getStrReplaceWhitespaces(string) {
 }
 
 // Uncomment for testing.
-export const exportedForTesting = {
-  getStrModified,
-  getStrDropLeadAndTrailWhitespaces,
-  getStrConsecutiveWhitespacesToOnlyOne,
-  getStrIssuerId,
-  getStrWithoutIssuerId,
-  getStrLowercase,
-  getStrReplaceNonAscii,
-  getStrDropCharactersInBrackets,
-  getStrIssuerRequiredPartsAsLowercase,
-  getStrDropUndesiredCharacters,
-  getStrReplaceWhitespaces,
-};
+// export const exportedForTesting = {
+//   getStrModified,
+//   getStrDropLeadAndTrailWhitespaces,
+//   getStrConsecutiveWhitespacesToOnlyOne,
+//   getStrIssuerId,
+//   getStrWithoutIssuerId,
+//   getStrLowercase,
+//   getStrReplaceNonAscii,
+//   getStrDropCharactersInBrackets,
+//   getStrIssuerRequiredPartsAsLowercase,
+//   getStrDropUndesiredCharacters,
+//   getStrReplaceWhitespaces,
+// };
