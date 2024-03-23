@@ -26,6 +26,18 @@ describe("Check function getStrConsecutiveWhitespacesToOnlyOne", function () {
   });
 });
 
+describe("Check function getStrIssuerId", function () {
+  it("Check expected result", function () {
+    expect(exportedForTesting.getStrIssuerId("AB cd")).toBe("AB");
+  });
+});
+
+describe("Check function getStrWithoutIssuerId", function () {
+  it("Check expected result", function () {
+    expect(exportedForTesting.getStrWithoutIssuerId("AB cd")).toBe("cd");
+  });
+});
+
 describe("Check function getStrLowercase", function () {
   it("Check expected result", function () {
     expect(exportedForTesting.getStrLowercase("ÁáÑ")).toBe("ááñ");
