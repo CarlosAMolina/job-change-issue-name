@@ -4,6 +4,10 @@
 
 Modify the name of a Jira's issuer to create git branches, folders, etc.
 
+## Considerations
+
+- The first part of the string to modify must be the issuer ID because the characters until the first white space will not be modified no lowercase.
+
 ## Test
 
 Modify the `src/modify-name.js` file:
