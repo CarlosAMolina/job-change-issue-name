@@ -5,7 +5,7 @@ import { exportedForTesting } from "../src/modify-name.js";
 describe("Check function getStrModified", function () {
   it("Check expected result", function () {
     expect(
-      exportedForTesting.getStrModified("ASDF [foo] [bar] step 1.foo."),
+      exportedForTesting.getStrModified("ASDF: [foo] [bar] step 1:.foo."),
     ).toBe("asdf-step-1-foo");
   });
 });
