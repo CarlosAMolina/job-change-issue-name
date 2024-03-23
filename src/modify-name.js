@@ -54,11 +54,17 @@ function getStrConsecutiveWhitespacesToOnlyOne(string) {
 }
 
 function getStrIssuerId(string) {
-  return string.substring(0, string.indexOf(' '));
+  return string.substring(0, getIntIndexOfFirstWhitespace(string));
 }
 
 function getStrWithoutIssuerId(string) {
-  return string.substring(string.indexOf(' ') + 1, string.length);
+  return string.substring(
+    getIntIndexOfFirstWhitespace(string) + 1, string.length
+  );
+}
+
+function getIntIndexOfFirstWhitespace(string) {
+  return string.indexOf(' ');
 }
 
 function getStrLowercase(string) {
