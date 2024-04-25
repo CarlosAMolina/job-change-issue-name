@@ -65,12 +65,13 @@ function getStrIssuerId(string) {
 
 function getStrWithoutIssuerId(string) {
   return string.substring(
-    getIntIndexOfFirstWhiteSpace(string) + 1, string.length
+    getIntIndexOfFirstWhiteSpace(string) + 1,
+    string.length,
   );
 }
 
 function getIntIndexOfFirstWhiteSpace(string) {
-  return string.indexOf(' ');
+  return string.indexOf(" ");
 }
 
 function getStrLowercase(string) {
@@ -100,7 +101,7 @@ function getStrDropCharactersInBrackets(string) {
 
 // https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
 function getStrDropUndesiredCharacters(string) {
-  return string.replace(/\.|:/g, " ");
+  return string.replace(/\.|:|-/g, " ");
 }
 
 function getStrReplaceWhiteSpaces(string) {

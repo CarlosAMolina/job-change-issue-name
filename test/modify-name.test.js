@@ -2,10 +2,10 @@ import { describe, expect, it } from "@jest/globals";
 
 import { exportedForTesting } from "../src/modify-name.js";
 
-describe("Check function getStrModified", function () {
+describe("Check function getStrModified with all possible characters to modify", function () {
   it("Check expected result", function () {
     expect(
-      exportedForTesting.getStrModified("ASDF: [foo] [bar] step 1:.foo."),
+      exportedForTesting.getStrModified("ASDF: [foo] [bar] step - 1:.foo."),
     ).toBe("ASDF-step-1-foo");
   });
 });
@@ -26,10 +26,11 @@ describe("Check function getStrConsecutiveWhiteSpacesToOnlyOne", function () {
   });
 });
 
-
 describe("Check function getStrIssuerRequiredPartsAsLowercase", function () {
   it("Check expected result", function () {
-    expect(exportedForTesting.getStrIssuerRequiredPartsAsLowercase("AB CD EF")).toBe("AB cd ef");
+    expect(
+      exportedForTesting.getStrIssuerRequiredPartsAsLowercase("AB CD EF"),
+    ).toBe("AB cd ef");
   });
 });
 
@@ -67,9 +68,9 @@ describe("Check function getStrDropCharactersInBrackets", function () {
 
 describe("Check function getStrDropUndesiredCharacters", function () {
   it("Check expected result", function () {
-    expect(exportedForTesting.getStrDropUndesiredCharacters("Foo: :.foo.")).toBe(
-      "Foo    foo ",
-    );
+    expect(
+      exportedForTesting.getStrDropUndesiredCharacters("Foo: :.foo."),
+    ).toBe("Foo    foo ");
   });
 });
 
