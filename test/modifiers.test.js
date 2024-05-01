@@ -1,7 +1,7 @@
 import { describe, expect, it } from "@jest/globals";
 
-import { getStrModified } from "../src/newscripts.js";
-import { exportedForTesting } from "../src/newscripts.js";
+import { getStrModified } from "../src/modifiers.js";
+import { exportedForTesting } from "../src/modifiers.js";
 
 describe("Check function getStrModified with all possible characters to modify", function () {
   it("Check expected result", function () {

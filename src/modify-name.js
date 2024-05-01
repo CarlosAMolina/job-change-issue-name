@@ -1,4 +1,4 @@
-import { getStrModified } from "./newscripts.js";
+import { getStrModified } from "./modifiers.js";
 
 document.getElementById("search-button").onclick = function () {
   run_input_query();
