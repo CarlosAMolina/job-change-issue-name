@@ -9,7 +9,7 @@
     "prettier": "npx prettier src test --check",
     "prettier:fix": "npm run prettier -- --write",
     "test": "jest",
-    "web": "npm exec http-server & firefox http://127.0.0.1:8080"
+    "web": "npm exec http-server & firefox http://127.0.0.1:8080/src/modify-name.html"
   },
   "pre-commit": [
     "lint",
