@@ -1,5 +1,6 @@
 /* Web site style */
-/*
+/* Local development
+cd /tmp && wget https://cmoli.es/common-sections.css
 @import url("/tmp/common-sections.css");
 */
 @import url("../../../common-sections.css");
