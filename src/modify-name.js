@@ -1,4 +1,4 @@
-import { getResultHtml } from "./newscripts.js";
+import { getStrModified } from "./newscripts.js";
 
 document.getElementById("search-button").onclick = function () {
   run_input_query();
@@ -24,6 +24,11 @@ function run_input_query() {
     const errorMessage = getErrorMessageToShow(error);
     document.getElementById("error-output").textContent = errorMessage;
   }
+}
+
+function getResultHtml(searchTerm) {
+  const modified_string = getStrModified(searchTerm);
+  return "<p>".concat(modified_string, "</p>");
 }
 
 function getErrorMessageToShow(error) {

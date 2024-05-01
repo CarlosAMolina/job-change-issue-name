@@ -1,12 +1,13 @@
 import { describe, expect, it } from "@jest/globals";
 
+import { getStrModified } from "../src/newscripts.js";
 import { exportedForTesting } from "../src/newscripts.js";
 
 describe("Check function getStrModified with all possible characters to modify", function () {
   it("Check expected result", function () {
-    expect(
-      exportedForTesting.getStrModified("ASDF: [foo] [bar] step - 1:.foo."),
-    ).toBe("ASDF-step-1-foo");
+    expect(getStrModified("ASDF: [foo] [bar] step - 1:.foo.")).toBe(
+      "ASDF-step-1-foo",
+    );
   });
 });
 

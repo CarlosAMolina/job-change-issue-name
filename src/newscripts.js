@@ -1,9 +1,4 @@
-export function getResultHtml(searchTerm) {
-  const modified_string = getStrModified(searchTerm);
-  return "<p>".concat(modified_string, "</p>");
-}
-
-function getStrModified(string) {
+export function getStrModified(string) {
   let result = string;
   result = getStrDropCharactersInBrackets(result);
   result = getStrIssuerRequiredPartsAsLowercase(result);
@@ -79,7 +74,6 @@ function getStrReplaceWhiteSpaces(string) {
 }
 
 export const exportedForTesting = {
-  getStrModified,
   getStrDropLeadAndTrailWhiteSpaces,
   getStrConsecutiveWhiteSpacesToOnlyOne,
   getStrIssuerId,
