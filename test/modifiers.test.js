@@ -5,7 +5,7 @@ import { exportedForTesting } from "../src/modifiers.js";
 
 describe("Check function getStrModified with all possible characters to modify", function () {
   it("Check expected result", function () {
-    expect(getStrModified("ASDF: [foo] [bar] step - 1:.foo.")).toBe(
+    expect(getStrModified(" ASDF: [foo] [bar] step - 1:.foo.")).toBe(
       "ASDF-step-1-foo",
     );
   });

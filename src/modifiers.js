@@ -1,5 +1,6 @@
 export function getStrModified(string) {
   let result = string;
+  result = getStrDropLeadAndTrailWhiteSpaces(result);
   result = getStrDropCharactersInBrackets(result);
   result = getStrIssuerRequiredPartsAsLowercase(result);
   result = getStrReplaceNonAscii(result);
