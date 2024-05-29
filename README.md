@@ -22,6 +22,12 @@ npm install
 npm test
 ```
 
+### Open the web in your local browser
+
+```bash
+npm run web
+```
+
 ## Resources
 
 Pre-commit
