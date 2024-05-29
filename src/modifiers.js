@@ -67,7 +67,7 @@ function getStrDropCharactersInBrackets(string) {
 
 // https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
 function getStrDropUndesiredCharacters(string) {
-  return string.replace(/\.|:|-/g, " ");
+  return string.replace(/\.|:|-|\(|\)/g, " ");
 }
 
 function getStrReplaceWhiteSpaces(string) {

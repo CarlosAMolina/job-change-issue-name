@@ -5,8 +5,8 @@ import { exportedForTesting } from "../src/modifiers.js";
 
 describe("Check function getStrModified with all possible characters to modify", function () {
   it("Check expected result", function () {
-    expect(getStrModified(" ASDF: [foo] [bar] step - 1:.foo.")).toBe(
-      "ASDF-step-1-foo",
+    expect(getStrModified(" ASDF: [foo] [bar] (a) step - 1:.foo.")).toBe(
+      "ASDF-a-step-1-foo",
     );
   });
 });
@@ -70,8 +70,8 @@ describe("Check function getStrDropCharactersInBrackets", function () {
 describe("Check function getStrDropUndesiredCharacters", function () {
   it("Check expected result", function () {
     expect(
-      exportedForTesting.getStrDropUndesiredCharacters("Fo-o: :.fo-o."),
-    ).toBe("Fo o    fo o ");
+      exportedForTesting.getStrDropUndesiredCharacters("Fo-o: :.fo-o. (foo)"),
+    ).toBe("Fo o    fo o   foo ");
   });
 });
 
