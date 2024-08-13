@@ -1,10 +1,4 @@
-/* Web site style */
-/* Local development
-cd /tmp && wget https://cmoli.es/base.css
-@import url("/tmp/base.css");
-*/
-/* Relative path when the script is used in cmoli.es */
-@import url("../../../base.css");
+@import url("https://cmoli.es/base.css");
 
 /* https://github.com/duckduckgo/duckduckgo-styles/blob/master/icons/font/ddg-serp-icons.ttf */
 @font-face {
@@ -41,10 +35,6 @@ p {
 a {
   text-decoration: none;
   color: var(--TAG-A-COLOR);
-}
-
-.hidden {
-  display: none;
 }
 
 .title {
